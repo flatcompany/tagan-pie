@@ -1,0 +1,60 @@
+@use "sass:map";
+
+
+// Определение брейкпоинтов
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 993px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Миксин для устройст которые поддерживаю состояние hover
+@mixin only-for-hover() {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+// Миксин для desktop
+@mixin desktop() {
+  @include respond-to(lg) {
+    @content
+  };
+}
+
+// Миксин для mobile
+@mixin mobile() {
+  @include respond-to-max(lg) {
+    @content
+  };
+}
+
+// Миксин для min-width
+@mixin respond-to($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// Миксин для max-width
+@mixin respond-to-max($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint) - 1px) {
+      @content;
+    }
+  }
+}
+
+// Миксин для диапазона между брейкпоинтами
+@mixin respond-between($lower, $upper) {
+  @if map.has-key($breakpoints, $lower) and map.has-key($breakpoints, $upper) {
+    @media (min-width: map.get($breakpoints, $lower)) and (max-width: map.get($breakpoints, $upper) - 1px) {
+      @content;
+    }
+  }
+}

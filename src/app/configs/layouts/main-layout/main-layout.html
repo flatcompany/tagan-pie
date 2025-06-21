@@ -1,0 +1,36 @@
+@let countLike = likeCocktails$ | async;
+@let countAll = allCocktails$ | async;
+@let countLong = longCocktails$ | async;
+@let countShots = shotsCocktails$ | async;
+
+<mat-toolbar>
+  <span class="title" routerLink="/all">Таганрогский пирог</span>
+  <span class="spacer"></span>
+  <button matIconButton class="icon favorite-icon" routerLink="/likes" aria-label="Example icon-button with heart icon">
+    <mat-icon matBadge="{{countLike?.length}}">favorite</mat-icon>
+  </button>
+  <button matIconButton class="icon" routerLink="/random" aria-label="Example icon-button with share icon">
+    <mat-icon>autorenew</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a mat-tab-link routerLink="/all" routerLinkActive #rlaAll="routerLinkActive" [active]="rlaAll.isActive">
+    Все ({{ countAll?.length }})
+  </a>
+  <a mat-tab-link routerLink="/shots" routerLinkActive #rlaShots="routerLinkActive" [active]="rlaShots.isActive">Шоты ({{ countShots?.length }})</a>
+  <a mat-tab-link routerLink="/longs" routerLinkActive #rlaLongs="routerLinkActive" [active]="rlaLongs.isActive">Лонги ({{ countLong?.length }})</a>
+</nav>
+
+<mat-tab-nav-panel #tabPanel>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+    @if (isLoading) {
+      <div class="center">
+        <mat-spinner></mat-spinner>
+      </div>
+    }
+</mat-tab-nav-panel>

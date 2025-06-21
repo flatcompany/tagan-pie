@@ -1,0 +1,6 @@
+<div class="wrapper">
+  @let cocktails = displayedCocktails$ | async;
+  @for (cocktail of cocktails; track cocktail.name) {
+    <app-card [cocktail]="cocktail"></app-card>
+  }
+</div>

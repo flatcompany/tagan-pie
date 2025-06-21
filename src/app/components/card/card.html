@@ -1,0 +1,60 @@
+<mat-card class="cocktail-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>
+      {{ cocktail.name }}
+    </mat-card-title>
+  </mat-card-header>
+
+  @if (!cocktail.isExpanded) {
+    <img class="cocktail-card__img" mat-card-image [src]="cocktail.image ? '/assets/' + cocktail.image : '/assets/img/pie.png'" alt="{{ cocktail.name }}">
+  }
+
+  @if (cocktail.isExpanded) {
+    <mat-card-content>
+      <div class="cocktail-card__detail">
+        <div class="detail-item">
+          <p><strong>Состав: </strong> <i>{{ cocktail.compound.join(', ') }}</i></p>
+        </div>
+
+        @if (cocktail.liqueurs && cocktail.liqueurs.length) {
+          <mat-divider></mat-divider>
+
+          <div class="detail-item">
+            <p><strong>Ликёры: </strong> <i>{{ cocktail.liqueurs.join(', ') }}</i></p>
+          </div>
+        }
+
+        @if (cocktail.alcohol && cocktail.alcohol.length) {
+          <mat-divider></mat-divider>
+
+          <div class="detail-item">
+            <p><strong>Алкоголь: </strong> <i>{{ cocktail.alcohol.join(', ') }}</i></p>
+          </div>
+        }
+
+        @if (cocktail.glass) {
+          <mat-divider></mat-divider>
+
+          <div class="detail-item">
+            <p><strong>Тип стакана: </strong> <i>{{ cocktail.glass }}</i></p>
+          </div>
+        }
+      </div>
+    </mat-card-content>
+  }
+  <mat-card-footer>
+    <mat-card-actions>
+      @if (cocktail.isExpanded) {
+        <button matButton="elevated" (click)="toggleDetailInfo(cocktail.id)">Закрыть</button>
+      }
+
+      @if (!cocktail.isExpanded) {
+        <button matButton="filled" (click)="toggleDetailInfo(cocktail.id)">Подробнее</button>
+      }
+
+      <button matIconButton class="icon" (click)="toggleLike(cocktail.id)">
+        <mat-icon [style.color]="cocktail.isLike ? 'red' : 'rgba(0,0,0,0.54)'">favorite</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>

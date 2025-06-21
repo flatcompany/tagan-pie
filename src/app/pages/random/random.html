@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="roulette">
+    <h2>Тебе повезёт!</h2>
+
+    <div class="roulette-display" [ngClass]="{'success': !isSpinning && currentCocktail}">
+      <div class="cocktail-name">{{ currentCocktail?.name }}</div>
+      @if (currentCocktail && currentCocktail.image) {
+        <img [src]="'/assets/' + currentCocktail.image" alt="{{ currentCocktail.name }}">
+      }
+
+      @if (!currentCocktail) {
+        <img [src]="'/assets/img/pie.png'">
+      }
+    </div>
+
+    <button mat-raised-button color="primary" (click)="spinRoulette()" [disabled]="isSpinning">
+      Крутить рулетку
+    </button>
+  </div>
+</div>

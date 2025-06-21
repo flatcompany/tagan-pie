@@ -1,0 +1,35 @@
+.cocktail-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 318px;
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .mat-mdc-card-header {
+    margin-bottom: 16px;
+  }
+
+  .mat-mdc-card-content {
+    height: 100%;
+  }
+
+  .mat-mdc-card-actions {
+    justify-content: space-between;
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 200px;
+  }
+}

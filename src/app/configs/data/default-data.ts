@@ -1,0 +1,280 @@
+
+
+export const defaultData = {
+  "shots": [
+    {
+      "id": "965afe07-55b3-4b3f-90e4-508fa1f3e7cb",
+      "name": "Б-52",
+      "compound": ["15 кофейный ликер", "15 бэйлиз", "15 апельсиновый ликер"],
+      "type": "shot",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": [],
+      "liqueurs": ["кофейный ликер", "бэйлиз", "апельсиновый ликер"],
+      "image": "img/icons/b_52_icon.png"
+    },
+    {
+      "id": "c97b1a58-2137-4e54-a3a0-9c333d97d1e1",
+      "name": "Текила бум",
+      "compound": ["50 текила", "100 спрайт"],
+      "type": "shot",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["текила"],
+      "liqueurs": [],
+      "image": "img/icons/tequila_boom_icon.png"
+    },
+    {
+      "id": "6f4cff4b-fc61-4078-99eb-cea3fdc8d24f",
+      "name": "Камикадзе",
+      "compound": ["20 водка", "20 трипл сек", "10 сок лайма"],
+      "type": "shot",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["водка"],
+      "liqueurs": ["трипл сек"],
+      "image": "img/icons/kamikaze_icon.png"
+    },
+    {
+      "id": "4e557218-e56e-4b73-af93-cea7d60099e1",
+      "name": "Хот Шот",
+      "compound": ["20 егеря", "20 текилы", "2-3 капли табаско"],
+      "type": "shot",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["текила"],
+      "liqueurs": ["егеря"],
+      "image": "img/icons/hot_icon.png"
+    }
+  ],
+  "longs": [
+    {
+      "id": "e456134c-bff7-4c51-8a5b-588edaca7715",
+      "name": "Негрони",
+      "compound": ["лед", "50 джин", "50 кампари", "50 вермут красный", "долька апельсина"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["джин"],
+      "liqueurs": [],
+      "glass": "олд фэшн",
+      "image": "img/icons/negroni_icon.png"
+    },
+    {
+      "id": "4529fc6c-499e-452a-81d3-2594ec102353",
+      "name": "Белый русский",
+      "compound": ["лёд", "50 водка", "50 кофейный ликер", "30 сливки"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["водка"],
+      "liqueurs": ["кофейный ликер"],
+      "glass": "олд фэшн",
+      "image": "img/icons/white_russ_icon.png"
+    },
+    {
+      "id": "bb40f327-0941-4ec1-baa3-2b5582bb5c87",
+      "name": "Куба-либре",
+      "compound": ["лёд", "50 св ром", "120 кола", "10 сок лайма"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["ром"],
+      "liqueurs": [],
+      "glass": "хайбол",
+      "image": "img/icons/cuba_libre_icon.png"
+    },
+    {
+      "id": "74553fc9-7277-4a31-8349-a56f1e662a30",
+      "name": "Лонг-Айленд Айс Ти",
+      "compound": ["лёд", "15 водки", "15 джина", "15 св ром", "15 текила", "15 трипл сек", "20 сахарный сироп", "30 сока лимона", "1 всплеск кола"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["водка", "джин", "ром", "текила"],
+      "liqueurs": ["трипл сек"],
+      "glass": "хайбол",
+      "image": "img/icons/long_island_icon.png"
+    },
+    {
+      "id": "cb68636a-2b9d-4b2d-811b-240bd2497f10",
+      "name": "Текила Санрайз",
+      "compound": ["лед", "45 текила", "90 апельсиновый сок", "15 гренадин"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["текила"],
+      "liqueurs": [],
+      "glass": "хайбол",
+      "image": "img/icons/tekila_sunrise_icon.png"
+    },
+    {
+      "id": "986b8eaa-0e78-4713-b7cf-744bf480033d",
+      "name": "Пина-Колада",
+      "compound": ["50 св ром", "30 кокосовый ликер", "50 ананасовый сок"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["ром"],
+      "liqueurs": ["кокосовый ликер"],
+      "glass": "хайбол",
+      "image": "img/icons/pina_colada_icon.png"
+    },
+    {
+      "id": "c7fa5591-e687-4f2d-a2dc-ee9e00c89350",
+      "name": "Апероль-Спритц",
+      "compound": ["лёд", "90 просекко", "60 апероль", "газ. вода"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": [],
+      "liqueurs": ["апероль"],
+      "glass": "винный бокал",
+      "image": "img/icons/aperol_spritz_icon.png"
+    },
+    {
+      "id": "17e89248-1c9b-4b91-9b1d-bb980a12cbc5",
+      "name": "Кровавая Мэри",
+      "compound": ["лёд", "45 водка", "90 томатный сок", "15 лимонный сок", "6-10 капель вустершерского соуса", "табаско", "соль с порошком сельдерея", "чёрный перец", "сельдерей"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["водка"],
+      "liqueurs": [],
+      "glass": "хайбол",
+      "image": "img/icons/blood_mary_icon.png"
+    },
+    {
+      "id": "8911de14-d204-488a-9844-1aa6d58cc951",
+      "name": "Отвёртка",
+      "compound": ["лёд", "50 водка", "100 апельсиновый сок", "долька апельсина"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["водка"],
+      "liqueurs": [],
+      "glass": "хайбол",
+      "image": "img/icons/skudriver_icon.png"
+    },
+    {
+      "id": "d898be5a-3903-4a98-86f0-47623e2219fa",
+      "name": "Мохито",
+      "compound": ["лёд", "45 св ром", "мята", "20 сок лайма", "2 ложки сахара", "газ вода"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["ром"],
+      "liqueurs": [],
+      "glass": "хайбол",
+      "image": "img/icons/mahito_icon.png"
+    },
+    {
+      "id": "a6990a5e-67b8-4213-882d-9ab7666b8a90",
+      "name": "Маргарита",
+      "compound": ["лед", "50 текила", "20 апельсиновый ликер", "15 сок лайма"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["текила"],
+      "liqueurs": ["апельсиновый ликер"],
+      "glass": "бокал мартини",
+      "image": "img/icons/margarita_icon.png"
+    },
+    {
+      "id": "e9046672-6170-4ea6-a6a4-f4a8fa9084b8",
+      "name": "Джин-тоник",
+      "compound": ["лёд", "50 джин", "100 тоник", "20 сок лайма"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["джин"],
+      "liqueurs": [],
+      "glass": "хайбол",
+      "image": "img/icons/jin_tokin_icon.png"
+    },
+    {
+      "id": "8f6f2114-f397-4cef-8741-93f6143ff0e1",
+      "name": "Дайкири",
+      "compound": ["лёд", "60 св ром", "20 сок лайма", "2 ложки сахара"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["ром"],
+      "liqueurs": [],
+      "glass": "бокал мартини",
+      "image": "img/icons/daykiri_icon.png"
+    },
+    {
+      "id": "567ac28f-6718-46b5-8771-4de5c8a544f5",
+      "name": "Виски сауэр",
+      "compound": ["50 св ром", "30 кокосовый сок", "50 ананасовый сок"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["ром"],
+      "liqueurs": [],
+      "glass": "хайбол",
+      "image": "img/icons/suez_icon.png"
+    },
+    {
+      "id": "2b474eff-7a87-44c2-af6a-6d712176ba7a",
+      "name": "Гимлет",
+      "compound": ["лёд", "60 джин", "30 лаймовый сок"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["джин"],
+      "liqueurs": [],
+      "glass": "бокал мартини",
+      "image": "img/icons/gimlet_icon.png"
+    },
+    {
+      "id": "a86a8fd6-c68b-479f-add8-af63c09cddbe",
+      "name": "Мартини",
+      "compound": ["60 джин", "10 белый вермут", "оливка"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["джин"],
+      "liqueurs": [],
+      "glass": "бокал мартини",
+      "image": "img/icons/martyni_icon.png"
+    },
+    {
+      "id": "4f118bd8-627c-4a1a-805b-a21e8c8b5b36",
+      "name": "Голубая лагуна",
+      "compound": ["лёд", "50 водка", "20 блю кюрасао", "20 лимонный сок", "130 газ. вода", "ломтик апельсина"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["водка"],
+      "liqueurs": ["блю кюрасао"],
+      "glass": "хайбол",
+      "image": "img/icons/blue_laguna_icon.png"
+    },
+    {
+      "id": "a357d353-df0a-4d94-beb0-ccad68d74cf9",
+      "name": "Космополитен",
+      "compound": ["лёд", "40 водка", "15 апельсиновый ликер", "15 лимонный сок", "30 клюквенный сок"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["водка"],
+      "liqueurs": ["апельсиновый ликер"],
+      "glass": "бокал мартини",
+      "image": "img/icons/cosmopolitan_icon.png"
+    },
+    {
+      "id": "7f8c4139-1474-4c3d-819c-18350bff17a0",
+      "name": "Хайбол",
+      "compound": ["лёд", "50 виски", "150 колы"],
+      "type": "long",
+      "isExpanded": false,
+      "isLike": false,
+      "alcohol": ["виски"],
+      "liqueurs": [],
+      "glass": "хайбол",
+      "image": "img/icons/highball_icon.png"
+    }
+  ]
+}
