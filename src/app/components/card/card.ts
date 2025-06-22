@@ -5,8 +5,6 @@ import { MatButton, MatIconButton } from '@angular/material/button';
 import { CocktailItem } from '../../configs/types/cocktail-item';
 import { AppState } from '../../configs/state/app.state';
 import { MatIcon } from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
-import { NgClass } from '@angular/common';
 import { Localstorage } from '../../services/localstorage';
 
 @Component({
@@ -22,9 +20,7 @@ import { Localstorage } from '../../services/localstorage';
     MatButton,
     MatCardImage,
     MatIcon,
-    MatIconButton,
-    RouterLink,
-    NgClass
+    MatIconButton
   ],
   templateUrl: './card.html',
   styleUrl: './card.scss'

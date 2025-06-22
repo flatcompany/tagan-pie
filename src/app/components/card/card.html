@@ -6,7 +6,7 @@
   </mat-card-header>
 
   @if (!cocktail.isExpanded) {
-    <img class="cocktail-card__img" mat-card-image [src]="cocktail.image ? '/assets/' + cocktail.image : '/assets/img/pie.png'" alt="{{ cocktail.name }}">
+    <img class="cocktail-card__img" mat-card-image [src]="cocktail.image ? 'assets/' + cocktail.image : '/assets/img/pie.png'" alt="{{ cocktail.name }}">
   }
 
   @if (cocktail.isExpanded) {

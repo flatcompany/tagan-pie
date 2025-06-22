@@ -5,11 +5,11 @@
     <div class="roulette-display" [ngClass]="{'success': !isSpinning && currentCocktail}">
       <div class="cocktail-name">{{ currentCocktail?.name }}</div>
       @if (currentCocktail && currentCocktail.image) {
-        <img [src]="'/assets/' + currentCocktail.image" alt="{{ currentCocktail.name }}">
+        <img [src]="'assets/' + currentCocktail.image" alt="{{ currentCocktail.name }}">
       }
 
       @if (!currentCocktail) {
-        <img [src]="'/assets/img/pie.png'">
+        <img [src]="'assets/img/pie.png'">
       }
     </div>
 
