@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { CocktailItem } from '../../configs/types/cocktail-item';
 import { AppState } from '../../configs/state/app.state';
-import { Subscription } from 'rxjs';
+import { Subscription, take } from 'rxjs';
 import { NgClass } from '@angular/common';
 import { MatButton } from '@angular/material/button';
 
@@ -23,7 +23,11 @@ export class Random implements OnDestroy {
   private rouletteSub?: Subscription;
 
   constructor(private appState: AppState) {
-    this.appState.getAllCocktails().subscribe(cocktails => {
+    this.appState.getAllCocktails()
+      .pipe(
+        take(1)
+      )
+      .subscribe(cocktails => {
       this.cocktails = cocktails;
     });
   }
