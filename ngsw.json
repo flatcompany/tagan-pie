@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1750581540249,
+  "timestamp": 1750581934102,
   "index": "/tagan-pie/index.html",
   "assetGroups": [
     {
@@ -33,7 +33,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/tagan-pie/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/tagan-pie/favicon.ico": "856b838d750b45ed3eebb749f30fc8fd35c843ba",
     "/tagan-pie/index.html": "a2a0e1e98d16efe2314016a2c2ebcaa6918a1e09",
     "/tagan-pie/main-B4BG6E3T.js": "1b29892c1cba50afef09953a983a4f921f25bb1f",
     "/tagan-pie/manifest.webmanifest": "b0e0843fea66ac7bd191797b3d17d368e966b0f5",
